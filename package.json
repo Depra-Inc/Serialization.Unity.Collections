@@ -1,0 +1,15 @@
+{
+  "name": "com.depra.serialization.unity",
+  "displayName": "Depra.Serialization.Unity",
+  "version": "1.0.0",
+  "unity": "2021.3",
+  "hideInEditor": false,
+  "keywords": [
+    "Random",
+    "Runtime"
+  ],
+  "license": "Apache-2.0",
+  "description": "Provides classes and utilities for serializing objects and displaying them in the UnityEngine inspector.",
+  "type": "module",
+  "unityRelease": "12f1"
+}
