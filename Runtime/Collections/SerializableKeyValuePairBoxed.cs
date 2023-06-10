@@ -25,10 +25,6 @@ namespace Depra.Serialization.Unity.Runtime.Collections
         [SerializeField] private TKey _key;
         [SerializeField] private List<TValue> _values;
 
-        public TKey Key => _key;
-        public List<TValue> Values => _values;
-        public TValue Value => _values[0];
-
         public SerializableKeyValuePairBoxed(TKey key, List<TValue> values)
         {
             _key = key;
@@ -38,8 +34,11 @@ namespace Depra.Serialization.Unity.Runtime.Collections
         public SerializableKeyValuePairBoxed(TKey key, TValue value)
         {
             _key = key;
-            var container = new List<TValue> {value};
-            _values = container;
+            _values = new List<TValue> {value};
         }
+
+        public TKey Key => _key;
+        public TValue Value => _values[0];
+        public List<TValue> Values => _values;
     }
 }

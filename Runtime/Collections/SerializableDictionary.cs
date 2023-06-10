@@ -24,13 +24,8 @@ namespace Depra.Serialization.Unity.Runtime.Collections
     {
         [SerializeField] private List<SerializableKeyValuePair<TKey, TValue>> _keys;
 
-        public static implicit operator SerializableDictionary<TKey, TValue>(Dictionary<TKey, TValue> dictionary)
-        {
-            SerializableDictionary<TKey, TValue> serializableDict = dictionary;
-            return serializableDict;
-        }
-
-        public SerializableDictionary() => _keys = new List<SerializableKeyValuePair<TKey, TValue>>();
+        public SerializableDictionary() =>
+            _keys = new List<SerializableKeyValuePair<TKey, TValue>>();
 
         /// <summary>
         /// Adds directly to the <seealso cref="SerializableDictionary{TKey,TValue}"/> without needing to manually encapsulate the value in a <seealso cref="SerializableKeyValuePair{K,V}"/> container.
@@ -66,7 +61,7 @@ namespace Depra.Serialization.Unity.Runtime.Collections
         {
             TryGetValue(key, out var defaultValue);
 
-            return defaultValue.Value;
+            return defaultValue!.Value;
         }
 
         public void OnBeforeSerialize()

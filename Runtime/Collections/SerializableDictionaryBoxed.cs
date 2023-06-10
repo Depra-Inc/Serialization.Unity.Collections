@@ -30,13 +30,8 @@ namespace Depra.Serialization.Unity.Runtime.Collections
     {
         [SerializeField] private List<SerializableKeyValuePairBoxed<TKey, TValue>> _keys;
 
-        public static implicit operator SerializableDictionaryBoxed<TKey, TValue>(Dictionary<TKey, TValue> dictionary)
-        {
-            SerializableDictionaryBoxed<TKey, TValue> serializableDict = dictionary;
-            return serializableDict;
-        }
-
-        public SerializableDictionaryBoxed() => _keys = new List<SerializableKeyValuePairBoxed<TKey, TValue>>();
+        public SerializableDictionaryBoxed() =>
+            _keys = new List<SerializableKeyValuePairBoxed<TKey, TValue>>();
 
         /// <summary>
         /// Adds directly to the <seealso cref="SerializableDictionaryBoxed{TKey,TValue}"/> without needing to
@@ -82,7 +77,7 @@ namespace Depra.Serialization.Unity.Runtime.Collections
         {
             TryGetValue(key, out var defaultValue);
 
-            return defaultValue.Value;
+            return defaultValue!.Value;
         }
 
         /// <summary>
@@ -111,7 +106,7 @@ namespace Depra.Serialization.Unity.Runtime.Collections
         {
             TryGetValue(key, out var defaultValue);
 
-            return defaultValue.Values;
+            return defaultValue!.Values;
         }
 
         public void OnBeforeSerialize()
