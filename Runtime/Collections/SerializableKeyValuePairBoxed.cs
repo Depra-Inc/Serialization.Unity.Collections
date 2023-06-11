@@ -7,6 +7,7 @@ using UnityEngine;
 
 namespace Depra.Serialization.Unity.Runtime.Collections
 {
+    // ReSharper disable once InvalidXmlDocComment
     /// <summary>
     /// This <see cref="SerializableKeyValuePairBoxed{TKey,TValue}"/> stores the Key and the Value(s)
     /// for the <see cref="SerializableDictionaryBoxed{TKey,TValue}"/>.
@@ -22,23 +23,21 @@ namespace Depra.Serialization.Unity.Runtime.Collections
     [Serializable]
     public class SerializableKeyValuePairBoxed<TKey, TValue> : List<TValue>
     {
-        [SerializeField] private TKey _key;
-        [SerializeField] private List<TValue> _values;
+        [field: SerializeField] public TKey Key { get; private set; }
+        [field: SerializeField] public List<TValue> Values { get; private set; }
 
         public SerializableKeyValuePairBoxed(TKey key, List<TValue> values)
         {
-            _key = key;
-            _values = values;
+            Key = key;
+            Values = values;
         }
 
         public SerializableKeyValuePairBoxed(TKey key, TValue value)
         {
-            _key = key;
-            _values = new List<TValue> {value};
+            Key = key;
+            Values = new List<TValue> {value};
         }
 
-        public TKey Key => _key;
-        public TValue Value => _values[0];
-        public List<TValue> Values => _values;
+        public TValue Value => Values[0];
     }
 }

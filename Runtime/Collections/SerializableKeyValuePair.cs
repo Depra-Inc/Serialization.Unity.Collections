@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace Depra.Serialization.Unity.Runtime.Collections
 {
+    // ReSharper disable once InvalidXmlDocComment
     /// <summary>
     /// This <see cref="SerializableKeyValuePair{TKey,TValue}"/> stores the Key and the Value(s)
     /// for the <see cref="SerializableDictionary{TKey,TValue}"/>.
@@ -18,16 +19,13 @@ namespace Depra.Serialization.Unity.Runtime.Collections
     [Serializable]
     public class SerializableKeyValuePair<TKey, TValue>
     {
-        [SerializeField] private TKey _key;
-        [SerializeField] private TValue _value;
+        [field: SerializeField] public TKey Key { get; private set; }
+        [field: SerializeField] public TValue Value { get; private set; }
 
         public SerializableKeyValuePair(TKey key, TValue value)
         {
-            _key = key;
-            _value = value;
+            Key = key;
+            Value = value;
         }
-
-        public TKey Key => _key;
-        public TValue Value => _value;
     }
 }

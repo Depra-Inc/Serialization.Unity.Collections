@@ -1,0 +1,18 @@
+{
+    "name": "Depra.Serialization.Unity.Editor",
+    "rootNamespace": "",
+    "references": [
+        "GUID:93bbe3657012204429db7a288b4f57ba"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
