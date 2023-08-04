@@ -1,8 +1,11 @@
+// Copyright © 2022-2023 Nikolay Melnikov. All rights reserved.
+// SPDX-License-Identifier: Apache-2.0
+
 using System.Diagnostics.CodeAnalysis;
-using Depra.Serialization.Unity.Runtime.Collections;
+using Depra.Serialization.Runtime.Collections;
 using UnityEngine;
 
-namespace Depra.Serialization.Unity.Example
+namespace Depra.Serialization.Samples
 {
     [SuppressMessage("ReSharper", "NotAccessedField.Local")]
     internal sealed class SerializedDictionaryReview : MonoBehaviour

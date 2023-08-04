@@ -1,7 +1,10 @@
+// Copyright © 2022-2023 Nikolay Melnikov. All rights reserved.
+// SPDX-License-Identifier: Apache-2.0
+
 using System.Runtime.Serialization;
 using UnityEngine;
 
-namespace Depra.Serialization.Unity.Runtime.Surrogates
+namespace Depra.Serialization.Runtime.Surrogates
 {
     public static class SurrogateSelectorExtension
     {
