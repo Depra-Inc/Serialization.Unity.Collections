@@ -1,25 +1,33 @@
 {
-  "name": "com.depra.serialization.unity",
-  "displayName": "Depra.Serialization.Unity",
-  "author": "Depra, Inc.",
-  "version": "1.1.0",
+  "name": "com.depra.serialization.collections",
+  "displayName": "Depra.Serialization.Collections",
+  "description": "Provides classes for serializing collections and displaying them in the UnityEngine inspector.",
+  "version": "0.0.1",
   "unity": "2021.3",
-  "type": "module",
+  "license": "Apache-2.0",
   "keywords": [
     "Depra",
     "Serialization",
     "Unity",
+    "Runtime",
     "Inspector",
-    "Editor",
-    "Runtime"
+    "Dictionary",
+    "Collections"
   ],
-  "description": "Provides classes and utilities for serializing objects and displaying them in the UnityEngine inspector.",
-  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Depression-aggression/Serialization.Unity.Collections.git"
+  },
+  "author": {
+    "name": "Depra, Inc.",
+    "email": "n.melnikov@depra.org",
+    "url": "https://github.com/Depression-aggression"
+  },
   "samples": [
     {
-      "displayName": "Some trash",
+      "displayName": "Components for review.",
       "description": "",
-      "path": "Samples"
+      "path": "Samples~"
     }
   ]
 }

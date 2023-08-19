@@ -1,0 +1,16 @@
+{
+    "name": "Depra.Serialization.Collections.Samples",
+    "rootNamespace": "",
+    "references": [
+        "GUID:483f2a65902a36c429ff294b5c0dcd71"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": false,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
